@@ -16,9 +16,8 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          platforms: linux/amd64,linux/arm64
           push: false
-          save: true
+          load: true
           tags: ram042:web3-storage-docker
       - name: Test
         run: |
