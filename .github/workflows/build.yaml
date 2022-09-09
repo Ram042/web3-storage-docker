@@ -22,5 +22,4 @@ jobs:
           tags: ram042:web3-storage-docker
       - name: Test
         run: |
-          docker run --rm -it ram042:web3-storage-docker w3 --version  
-
+          docker run --rm ram042:web3-storage-docker w3 --version
