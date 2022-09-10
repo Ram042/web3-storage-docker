@@ -6,7 +6,7 @@ Start interactive shell
 ```shell
 export W3_TOKEN=<your token>
 
-docker run --rm -it -E TOKEN=$W3_TOKEN ghcr.io/ram042/w3storage:latest
+docker run --rm -it -e TOKEN=$W3_TOKEN ghcr.io/ram042/w3storage:latest
 ```
 
 Execute commands
