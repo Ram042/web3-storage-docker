@@ -19,10 +19,6 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: ghcr.io/ram042/w3storage
-          tags: |
-            type=sha
-            type=ref,event=tag
-            latest
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
       - name: Log in to the Container registry
@@ -35,6 +31,6 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          platforms: linux/arm64
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ steps.meta.outputs.tags }}
